@@ -22,15 +22,15 @@ int main() {
 }
 
 
-int* countDivisiblePrimesFrequency(int number, int *primeNumbersCount)
+int* countDivisiblePrimesFrequency(int numberInput, int *primeNumbersCount)
 {
     int primeNumbers[PRIME_NUMS_BETWEEN_0_AND_100]
             = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
     int j = 0;
-    while (number > 1) {
+    while (numberInput > 1) {
         int count = 0;
-        while (number % primeNumbers[j] == 0) {
-            number /= primeNumbers[j];
+        while (numberInput % primeNumbers[j] == 0) {
+            numberInput /= primeNumbers[j];
             count++;
         }
         primeNumbersCount[j] += count;
